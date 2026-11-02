@@ -1,0 +1,98 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: rgb(231,221,229); font-family: Verdana, sans-serif; }
+
+.navbar { 
+    background:#e2cad7; 
+    padding:1rem 2rem; 
+    position:sticky; 
+    top:0; 
+    z-index:100; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center;
+}
+.logo { color:rgb(169,46,140); font-weight:bold; font-size:1.2rem; display:none; }
+.nav-links { list-style:none; display:flex; gap:1.5rem; justify-content:center; }
+.nav-links a { color:rgb(169,46,140); text-decoration:none; font-size:1.1rem; transition:0.3s; }
+.nav-links a:hover { color:black; }
+
+
+.hamburger { 
+    display:none; 
+    flex-direction:column; 
+    gap:5px; 
+    cursor:pointer; 
+}
+.hamburger span { 
+    width:25px; 
+    height:3px; 
+    background:rgb(169,46,140); 
+    border-radius:5px; 
+    display:block; 
+    transition:0.3s;
+}
+
+h1 { color:#d37daa; font-size:2.2rem; text-align:center; margin:2rem 0; }
+
+.account-container { display:flex; justify-content:center; padding:1rem; }
+.account-form {
+  background:white; width:90%; max-width:450px; padding:2rem;
+  border-radius:12px; display:flex; flex-direction:column; gap:0.8rem;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  animation: fadeIn 0.5s;
+}
+.account-form input {
+  padding:0.8rem; border:1px solid #e2cad7; border-radius:8px; width:100%;
+  transition:0.3s;
+}
+.btn-group { display:flex; gap:1rem; margin-top:1rem; }
+.btn-group input, .btn-group button {
+  flex:1; padding:0.9rem; border:none; border-radius:8px; cursor:pointer; transition:0.3s;
+}
+.btn-group input { background:#eee; }
+.account-form button { background:#d37daa; color:white; }
+
+
+.account-form button:hover { background:#a92e8c; transform:translateY(-2px); }
+.btn-group input:hover { background:#ccc; }
+.account-form input:focus { outline:none; border-color:#d37daa; box-shadow:0 0 0 2px rgba(211,125,170,0.2); }
+.account-form input:invalid { border-color:#ffaaaa; }
+.form-link { text-align:center; margin-top:10px; font-size:0.9rem; }
+.form-link a { color:rgb(169,46,140); text-decoration:none; }
+.form-link a:hover { color:#a92e8c; text-decoration:underline; }
+
+
+#errorBox, #successBox { transition:0.3s; }
+#passwordStrength { transition:0.3s; }
+
+@keyframes fadeIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+
+
+@media (max-width:768px) {
+  .hamburger { display:flex; }
+  .logo { display:block; }
+  .navbar { flex-direction:column; align-items:flex-start; }
+  .nav-links { 
+    position:absolute; 
+    top:100%; 
+    left:0; 
+    right:0; 
+    background:#e2cad7; 
+    flex-direction:column; 
+    align-items:center; 
+    padding:1rem 0; 
+    transform:translateY(-150%); 
+    opacity:0; 
+    transition:0.3s; 
+    pointer-events:none;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  }
+  .nav-links.show { 
+    transform:translateY(0); 
+    opacity:1; 
+    pointer-events:all; 
+  }
+  h1 { font-size:1.6rem; }
+  .btn-group { flex-direction:column; }
+  .account-form { width:95%; padding:1.5rem; }
+}

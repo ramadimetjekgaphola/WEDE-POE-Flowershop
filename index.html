@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Garden Bloom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav class="navbar">
+    <div class="logo">🌸 Garden Bloom</div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    <ul class="nav-links" id="navLinks">
+           <li><a href="index.html">Homepage</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+    </ul>
+    <div class="cart-icon" id="cartIcon">🛒 <span id="cartCount">0</span></div>
+ </nav>
+
+    <header class="hero">
+            <h1>Welcome to Garden Bloom</h1>
+            <p>Bloemfontein's favourite family flower shop since 2022</p>
+            <a href="gallery.html" class="btn">View Our Flowers</a>
+            <a href="#bestSellers" class="btn" style="background:white; color:#d37daa; margin-left:10px;">Shop Best Sellers</a>
+    </header>
+
+    <main class="home-container">
+        <section class="intro">
+            <h2>About Us</h2>
+            <p>
+                We are Garden Bloom Flowers! Our journey started in our home garage in 2022, 
+                selling to our community on special occasions. Our business was made out of 
+                passion and love for roses, and taking care of them.
+            </p>
+            <a href="about.html" class="link">Learn more about us →</a>
+        </section>
+
+        
+        <section class="features" id="bestSellers">
+            <h2 style="width:100%; text-align:center; color:#a92e8c; margin-bottom:1rem;">Best Sellers - Add to Cart</h2>
+            <div class="feature-card" data-name="Red Roses" data-price="150">
+                <h3>🌹 Fresh Roses</h3>
+                <p>Hand-picked daily from local farms</p>
+                <p style="font-weight:bold; color:#a92e8c;">R150</p>
+                <img src="flower1.jpeg" alt="Roses"  loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+            <div class="feature-card" data-name="Custom Bouquet" data-price="200">
+                <h3>💐 Custom Bouquets</h3>
+                <p>Made with love for every occasion</p>
+                <p style="font-weight:bold; color:#a92e8c;">R200</p>
+                <img src="flower3.jpeg" alt="Bouquet" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+            <div class="feature-card" data-name="Delivery Bouquet" data-price="130">
+                <h3>🚚 Local Delivery</h3>
+                <p>Fast delivery in Bloemfontein</p>
+                <p style="font-weight:bold; color:#a92e8c;">R130</p>
+                <img src="flower5.jpeg" alt="Delivery" loading="lazy" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin:10px 0;">
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span id="closeCart">&times;</span>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: R<span id="cartTotal">0</span></div>
+            <button id="checkoutBtn">Checkout & Pay</button>
+            <button id="clearCartBtn" class="clear-btn">Clear Cart</button>
+        </div>
+    </div>
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+  
+    <div id="paymentModal" class="payment-modal">
+        <div class="payment-box">
+            <span id="closePayment">&times;</span>
+            <h2>Payment - Garden Bloom</h2>
+            <div id="paymentSummary"></div>
+            <form id="paymentForm">
+                <input type="text" placeholder="Full Name on Card" required>
+                <input type="text" id="cardNumber" placeholder="Card Number 1234 5678 9012 3456" required>
+                <div style="display:flex; gap:10px;">
+                    <input type="text" id="cardExpiry" placeholder="MM/YY" required>
+                    <input type="text" id="cardCvv" placeholder="CVV" required>
+                </div>
+                <input type="email" id="payEmail" placeholder="Email for receipt" required>
+                <button type="submit" style="width:100%; padding:0.9rem; background:#a92e8c; color:white; border:none; border-radius:8px; margin-top:10px;">Pay R<span id="payTotal">0</span></button>
+            </form>
+            <div id="paymentSuccess" style="color:green; font-weight:bold; margin-top:10px;"></div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Garden Bloom</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="navLinks">
+           <li><a href="index.html">Homepage</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="gallery.html">Garden</a></li>
+           <li><a href="contact.html">Contact</a></li>
+           <li><a href="account.html">Account</a></li>
+        </ul>
+    </nav>
+    <h1>Create Account</h1>
+
+    <div class="account-container">
+        <form class="account-form" id="accountForm">
+            <label>First Name</label>
+            <input type="text" id="firstName" placeholder="Enter your name" required minlength="2">
+
+            <label>Surname</label>
+            <input type="text" id="surname" placeholder="Enter your surname" required minlength="2">
+
+            <label>Contact Details</label>
+            <input type="tel" id="phone" placeholder="Enter phone number" required pattern="[0-9]{10}">
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Choose username" required minlength="4">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password" required minlength="6">
+            <div id="passwordStrength" style="font-size:0.8rem; height:18px; margin-top:-5px;"></div>
+
+            <div id="errorBox" style="color:red; font-size:0.9rem; margin:5px 0;"></div>
+            <div id="successBox" style="color:green; font-size:0.9rem; margin:5px 0; font-weight:bold;"></div>
+
+            <div class="btn-group">
+                <input type="reset" value="Clear">
+                <button type="submit" id="submitBtn">Create Account</button>
+            </div>
+
+            <p class="form-link">Already have an account? <a href="#" id="loginLink">Login here</a></p>
+        </form>
+    </div>
+
+    <script src="account.js"></script>
+</body>
+</html>
