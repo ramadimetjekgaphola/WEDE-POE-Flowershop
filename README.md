@@ -15,3 +15,22 @@ Meta elements are hidden tags in the head that tell Google and the browser about
 <title>Bloom & Blossom Flower Shop</title> .
 <meta name="description" content="Affordable fresh flowers"> - shows as the small text under the link on Google.
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> - makes the site look good on phones.
+
+
+
+
+
+
+
+
+ Changelog - Part 3
+- Added JavaScript: image lightbox, form validation, lazy loading
+- Added SEO: robots.txt, sitemap.xml, meta description tags, Open Graph tags
+- Added Security: _headers file with security headers
+- Fixed feedback from Part 2: improved mobile responsiveness, optimized images, fixed navigation links
+
+ References:
+- MDN Web Docs - HTML Meta Tags
+- Google Search  - SEO Starter Guide
+- Netlify Docs - Deployment & Headers
+- W3Schools - JavaScript Lazy Loading
